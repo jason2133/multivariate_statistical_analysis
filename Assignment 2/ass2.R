@@ -78,3 +78,50 @@ dim(b5_3)
 dim(b5_1)
 
 b5_1 %*% b5_s %*% b5_3
+
+
+###
+wiki <- matrix(c(1, 0, -2/3, 1), nc=2, byrow=FALSE)
+wiki
+wiki2 <- solve(wiki)
+wiki2
+
+### Q4_c
+q4_1 <- matrix(c(1, 2, -2, 1), nc=2, byrow=FALSE)
+q4_1
+q4_2 <- matrix(c(5, 0, 0, 10), ncol=2, byrow=FALSE)
+q4_2
+q4_3 <- solve(q4_1)
+q4_3
+
+q4_4 <- q4_1 %*% q4_2 %*% q4_3
+q4_4
+
+q4_5 <- matrix(c(1/125, 0, 0, 1/1000), ncol=2, byrow=FALSE)
+q4_5
+
+q4_d <- q4_1 %*% q4_5 %*% q4_3
+q4_d
+q4_1
+q4_5
+q4_3
+q4_d
+
+q4_3_1 <- matrix(c(2.236, 0, 0, 3.162), ncol=2, byrow=FALSE)
+q4_3_1
+
+q4_e <- q4_1 %*% q4_3_1 %*% q4_3
+q4_e
+q4_1
+q4_3_1
+q4_3
+q4_e
+
+#################
+q4_d_1 <- matrix(c(1, -2, 2, 1), ncol=2, byrow=FALSE)
+q4_d_1
+q4_d_2 <- solve(q4_d_1)
+q4_d_2
+
+
+
