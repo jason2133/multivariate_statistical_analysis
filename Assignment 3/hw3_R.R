@@ -10,15 +10,23 @@ x
 dim(x) <- c(6, 1)
 x
 
+s
+
 ### a
 pca1 = prcomp(s)
 pca1$rotation
 pca1$sdev^2
+summary(pca1)
+
+a <- (1.760684e+06) + (3.515357e+03) + (1.700981e+02) + (1.065424e+01) + (4.267569e-02) + (1.586127e-28)
+a
+1.760684e+06 / a
 
 ### b
 pca2 = prcomp(s, center=T, scale=T)
 pca2$rotation
 pca2$sdev^2
+summary(pca2)
 
 ### c
 # I will recommend b
