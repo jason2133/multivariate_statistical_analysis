@@ -48,10 +48,10 @@ pca_cor_stock
 
 pca_cor_stock$sdev^2
 
+### b
 # scree plot
 screeplot(pca_cor_stock, type='l')
 
-### b
 # I will recommend 2
 
 ### c
