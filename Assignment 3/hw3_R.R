@@ -46,7 +46,9 @@ stock
 pca_cor_stock <- prcomp(stock, center=T, scale=T)
 pca_cor_stock
 
+pca_cor_stock$rotation
 pca_cor_stock$sdev^2
+summary(pca_cor_stock)
 
 ### b
 # scree plot
@@ -64,13 +66,14 @@ screeplot(pca_cor_stock, type='l')
 
 # Q4
 ### a
-radiotherapy = read.table('C:/Users/jason/¹ÙÅÁ È­¸é/coding1/multivariate_data_analysis/Assignment 3/radiotherapy.dat')
+radiotherapy = read.table('C:/Users/jason/¹ÙÅÁ È­¸é/coding1/multivariate_data_analysis/Assignment 3/radiotherapy.dat', header=TRUE)
 radiotherapy
 
 # Using the sample correlation matrix R
-pca_radiotherapy <- prcomp(stock, center=T, scale=T)
+pca_radiotherapy <- prcomp(radiotherapy, center=T, scale=T)
 pca_radiotherapy$rotation
 pca_radiotherapy$sdev^2
+summary(pca_radiotherapy)
 
 ### b
 # 2.437, 1.407, 0.5, 0.4, 0.255
@@ -86,14 +89,25 @@ c1 + c2
 # we can describe 76.88% of the data using 2 principal components instead of full 5 components.
 
 ### d
-pca_radiotherapy
+radio_d <- radiotherapy[1:5]
+radio_d
+apply(radio_d, 1, sum)
 
+pca_radiotherapy_score <- cbind(radiotherapy, pca_radiotherapy$x[,1:2])
+print(pca_radiotherapy_score)
+print(pca_radiotherapy_score['PC1'])
+print(apply(radio_d, 1, sum))
 
 ### e
 # screeplot(pca_radiotherapy, type='l')
 # Using the derived two principal components, produce a scatterplot of this data set. Discuss your findings. 
-plot(pca_radiotherapy$x[,1], pca_radiotherapy$x[,2], xlab="PC1",ylab="PC2",type="n",lwd=2)
+# plot(pca_radiotherapy$x[,1], pca_radiotherapy$x[,2], xlab="PC1",ylab="PC2",type="n",lwd=2)
 
+pca_radiotherapy_score <- cbind(radiotherapy, pca_radiotherapy$x[,1:2])
+print(pca_radiotherapy_score)
+
+plot(pca_radiotherapy_score[c("PC1", "PC2")], xlim=c(-4, 4), ylim=c(-4, 4))
+abline(h=0, v=0)
 
 # Y1 = -0.469*X1 - 0.532*X2 - 0.465*X3 - 0.387*X4 - 0.360*X5
 # Y2 = 
