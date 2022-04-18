@@ -9,6 +9,7 @@
 |2|Exploring Multivariate Data Graphically|
 |Review|Matrix Algebra: Vectors & Matrices|
 |3|Principal Component Analysis|
+|12|Exploratory Factor Analysis|
 
 <!-- |4|Support Vector Classifier|
 |5|Linear Classifier & Loss Function|
