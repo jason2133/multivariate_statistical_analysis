@@ -89,14 +89,16 @@ c1 + c2
 # we can describe 76.88% of the data using 2 principal components instead of full 5 components.
 
 ### d
-radio_d <- radiotherapy[1:5]
-radio_d
-apply(radio_d, 1, sum)
-
 pca_radiotherapy_score <- cbind(radiotherapy, pca_radiotherapy$x[,1:2])
 print(pca_radiotherapy_score)
 print(pca_radiotherapy_score['PC1'])
 print(apply(radio_d, 1, sum))
+a <- apply(radio_d, 1, sum)
+dim(a) <- c(98,1)
+a
+
+q4d <- data.frame(a, pca_radiotherapy_score['PC1'])
+q4d
 
 ### e
 # screeplot(pca_radiotherapy, type='l')
@@ -108,6 +110,7 @@ print(pca_radiotherapy_score)
 
 plot(pca_radiotherapy_score[c("PC1", "PC2")], xlim=c(-4, 4), ylim=c(-4, 4))
 abline(h=0, v=0)
+text(pca_radiotherapy_score[c("PC1", "PC2")], labels=rownames(pca_radiotherapy_score), pos=2)
 
 # Y1 = -0.469*X1 - 0.532*X2 - 0.465*X3 - 0.387*X4 - 0.360*X5
 # Y2 = 
