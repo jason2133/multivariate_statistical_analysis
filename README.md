@@ -23,4 +23,5 @@
 |1|Chapter 1 & 2|
 |2|Chapter Review|
 |3|Chapter 3|
+|4|Chapter 12|
 
