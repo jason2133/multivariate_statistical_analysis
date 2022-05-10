@@ -10,6 +10,7 @@
 |Review|Matrix Algebra: Vectors & Matrices|
 |3|Principal Component Analysis|
 |12|Exploratory Factor Analysis|
+|6|Clustering Analysis|
 
 <!-- |4|Support Vector Classifier|
 |5|Linear Classifier & Loss Function|
