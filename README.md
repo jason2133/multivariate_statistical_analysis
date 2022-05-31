@@ -11,6 +11,7 @@
 |3|Principal Component Analysis|
 |12|Exploratory Factor Analysis|
 |6|Clustering Analysis|
+|11|Discrimination|
 
 <!-- |4|Support Vector Classifier|
 |5|Linear Classifier & Loss Function|
@@ -24,4 +25,5 @@
 |2|Chapter Review|
 |3|Chapter 3|
 |4|Chapter 12|
+|5|Chapter 6|
 
